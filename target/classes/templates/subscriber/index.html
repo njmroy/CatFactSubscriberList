@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Subscriber List</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+
+
+
+	<div class="bg-image"
+		style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); height: 100vh">
+		<div class="white container h-100">
+			<div class="row h-100 justify-content-center align-items-center">
+				<div class="col-10 col-md-8 col-lg-6">
+
+					<h1 class=" text-center justify-content-center">CAT FACTS</h1>
+
+					<h2 class="text-center">DID YOU KNOW?</h2>
+
+					<p class="text-center">In terms of development, the first year
+						of a cat’s life is equal to the first 15 years of a human life.
+						After its second year, a cat is 25 in human years. And after that,
+						each year of a cat’s life is equal to about 7 human years.</p>
+					<h3 class="text-center justify-content-center">Subscribe to
+						our list to start receiving Cat Facts. Sign up below!</h3>
+					<form class="text-center justify-content-center" action="#"
+						th:action="@{/}" th:object="${subscriber}" method="post">
+
+
+						<table>
+
+							<tr>
+								<td class="text-center justify-content-center">First name:</td>
+								<td><input type="text" th:field="*{firstName}" /></td>
+							</tr>
+
+							<tr>
+								<td>Last name:</td>
+								<td><input type="text" th:field="*{lastName}" /></td>
+							</tr>
+
+							<tr>
+								<td>Username:</td>
+								<td><input type="text" th:field="*{userName}" /></td>
+							</tr>
+
+							<tr>
+								<td>E-mail:</td>
+								<td><input type="email" th:field="*{email}" /></td>
+							</tr>
+							<tr>
+								<td><div class="white container h-100">
+			<div class="row h-100 justify-content-center align-items-center">
+				<div class="col-10 col-md-8 col-lg-6"><p>
+										<button class="btn btn-success me-2" type="submit">Submit
+											your account</button>
+									</div></div></div></td>
+
+							</tr>
+
+						</table>
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
